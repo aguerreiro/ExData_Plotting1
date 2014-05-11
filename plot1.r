@@ -1,0 +1,7 @@
+library(datasets)
+tabAll <- read.table("./A1/household_power_consumption.txt", header = TRUE,sep = ";", colClasses = "character")
+interval <- subset(tabAll, tabAll[, 1] == "1/2/2007" | tabAll[, 1] == "2/2/2007")
+study[, 3] <- as.numeric(study[, 3])
+hist(study$Global_active_power, col = "orangered3", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+dev.copy(png, file = "plot1.png", bg = "transparent")
+dev.off()
